@@ -9,3 +9,4 @@ Thumbs.db
 
 vendor/
 node_modules/
+db_data/
