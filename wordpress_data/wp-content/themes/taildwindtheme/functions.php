@@ -17,8 +17,3 @@
 	 ) );
  }
  add_action( 'after_setup_theme', 'taildwindtheme_register_menus' );
-
-function taildwindtheme_enqueue_styles() {
-    wp_enqueue_style( 'tailwind-style', get_template_directory_uri() . '/dist/style.css', array(), '1.0', 'all' );
-}
-add_action( 'wp_enqueue_scripts', 'taildwindtheme_enqueue_styles' );
