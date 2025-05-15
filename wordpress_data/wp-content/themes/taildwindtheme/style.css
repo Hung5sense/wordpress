@@ -189,13 +189,34 @@ h1.slide-title{
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 0;
 }
 .hero-slider-container {
     padding-top: 85px;
     position: relative;
-    max-width: 1260px;
+    max-width: 1275px;
     margin: 0 auto;
+}
+.client-cards{
+    position: absolute;
+    top: 17px;
+    right: 0;
+    max-width: 33%;
+    z-index: 1;
+}
+.client-cards .item-slide{
+    position: relative;
+}
+.client-cards .item-slide .bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.img-content img{
+    position: relative;
+    left: -25px;
+    border-top-right-radius: 75px;
+    border-bottom-right-radius: 75px;
 }
 .hero-slider.swiper{
     overflow: unset;
@@ -541,6 +562,36 @@ h1.slide-title{
     display: flex;
     align-items: center;
 }
+/* Display Large Desktop */
+@media (min-width: 1921px) {
+    .hero-left{
+        height: calc(100% - 370px);
+    }
+}
+/* Display Desktop */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .hero-slider-container{
+        max-width: calc(100% - 235px);
+    }
+    .slide-content > div{
+        position: relative;
+        left: 60px;
+    }
+    .hero-left{
+        width: 235px;
+        height: 94vh;
+    }
+    .hero-social{
+        top: 50%;
+        transform: translateY(calc(-50% - 110px));
+    }
+    .slide-right-shapes span{
+        height: 80vh;
+    }
+    .hero-controls{
+        left: 35%;
+    }
+}
 /* Display Mac */
 @media (min-width: 1200px) and (max-width: 1440px) {
     .hero-left, .slide-right-shapes{
@@ -563,6 +614,9 @@ h1.slide-title{
     .client-bg{
         background: #eaeef4;
         margin-top: 150px;
+    }
+    .hero-slider-container{
+        max-width: calc(1260px - 272px);
     }
 }
 
@@ -644,4 +698,12 @@ h1.slide-title{
         left: 50px;
         bottom: 120px;
     }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }

@@ -1,6 +1,6 @@
 
 <?php get_template_part('partials/slideshow'); ?>
-
+<?php get_template_part('partials/about'); ?>
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <article>
